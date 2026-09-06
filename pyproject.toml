@@ -1,0 +1,19 @@
+[project]
+name = "mulcia-tfm-didp-models"
+version = "0.1.0"
+description = "DyPDL, MIP, and CP models for Domain-Independent Dynamic Programming research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "didppy>=0.7.1",
+    "networkx>=3.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+mip = ["gurobipy>=11.0"]
+cp = ["docplex>=2.25"]
+all = ["gurobipy>=11.0", "docplex>=2.25"]
+
+[dependency-groups]
+dev = []
