@@ -4,6 +4,22 @@
 
 The instance file must contain `k{#vehicles}` in its name.
 
+## PDDL conversion
+
+Convert all `.vrp` files in a folder to PDDL problem files (uses `domain.pddl` in this directory):
+
+```powershell
+.\convert_vrp_to_pddl.ps1 C:\path\to\folder
+```
+
+For each `instance-k4.vrp`, the script writes `instance-k4.pddl` in the same folder. Requires [uv](../README.md#setup-uv) from the repository root.
+
+Manual conversion of a single instance:
+
+```python3
+uv run python cvrp_to_pddl.py instance-k4.vrp
+```
+
 ```python3
 python3 cvrp_mip.py instance-k4.txt --history history.csv --time-out 1800
 ```
