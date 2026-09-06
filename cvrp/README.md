@@ -9,7 +9,14 @@ The instance file must contain `k{#vehicles}` in its name.
 Convert all `.vrp` files in a folder to PDDL problem files (uses `domain.pddl` in this directory):
 
 ```powershell
+# Windows
 .\convert_vrp_to_pddl.ps1 C:\path\to\folder
+```
+
+```bash
+# Linux / macOS
+chmod +x convert_vrp_to_pddl.sh
+./convert_vrp_to_pddl.sh /path/to/folder
 ```
 
 For each `instance-k4.vrp`, the script writes `instance-k4.pddl` in the same folder. Requires [uv](../README.md#setup-uv) from the repository root.
